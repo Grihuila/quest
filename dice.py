@@ -11,6 +11,6 @@ def play():
         user_sum[i] = random.randint(1,6)
     print("Выпадает {0[0]} и {0[1]}".format(user_sum))
     if sum(enemy_sum) < sum(user_sum):
-        print("Конгратс, ю виннер")
+        print("Братуха, ну поздравляю, ёб")
     else: 
-        print("НУ и лошара")
+        print("Чёт ты слабенький")
