@@ -11,7 +11,7 @@ Thomas tools module
 """
 
 
-def quest(question, option):
+def create_quest(question, option):
     print(question)
     print("[ Ваш ответ ]>>")
     response = input()
@@ -43,3 +43,12 @@ This - это ссылка на ту характеристику, котору�
 def change_chartics(obj, param):
     for key in param.keys():
         obj[key] = param[key](obj[key])
+
+
+def start(gamer):
+    print("[ Охраник ]: Добро пожаловать в игру")
+    print("(Укажите ваше имя) >>> ")
+    name = input()
+    gamer["name"] = name
+    print("Добро пожаловать в хату, "+name)
+    print("[ Охраник ]: Твоя задача выжить в хате")
