@@ -12,14 +12,20 @@ Thomas tools module
 
 
 def quest(question, option):
-    response = input(question+"\nВаш ответ>")
+    print(question)
+    print("[ Ваш ответ ]>>")
+    response = input()
     for res in option.keys():
         if res.upper() == response.upper():
             for fn in option[res]:
                 fn()
             break
     else:
-        option['else']()
+        if option.get("else") is None:
+            print("Ти шо тупой?Я же сказал, что нужно писать то, что в скобках")
+        else:
+            for fn in option["else"]:
+                fn()
 
 """
 Эта функция меняет характеристики обьектов
