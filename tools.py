@@ -9,10 +9,9 @@ Thomas tools module
 В @option храняться ключи, значение которых являются массивом lambda-функции,
 которые будут исполняться при выборе одного из ответов
 """
-def create_quest(question, option):
-    print(question)
-    print("[ Ваш ответ ]>>")
-    response = input()
+def run_quest(option):
+    print(option["for_input"])
+    response = input("[ Ваш ход ] >>> ")
     for res in option.keys():
         if res.upper() == response.upper():
             for fn in option[res]:
@@ -63,5 +62,5 @@ def print_available_quest(quests):
         option_answer = "[ (" + str(quests.index(quest) + 1) + ")"
         title = quest["title"] + " ]"
         print(option_answer+title)
-    print("(*) Показать инвентарь")
-    print("(#) Показать характеристики")
+    print("[ (*)Показать инвентарь ]")
+    print("[ (#)Показать характеристики ]")
