@@ -64,3 +64,8 @@ def print_available_quest(quests):
         print(option_answer+title)
     print("[ (*)Показать инвентарь ]")
     print("[ (#)Показать характеристики ]")
+
+def help(user):
+    print("Жизни: ", user["xp"])
+    print("Урон: ", user["attack"])
+    print("Защита: ", user["defence"])
